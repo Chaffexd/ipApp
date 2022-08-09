@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet'/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <title>My IP</title>
+
+</head>
+<body>
+    
+    <main>
+        <div id="holder">
+            <div id="container">
+                <div id="title">What is my IP? 🌎</div>
+                <div id="ip">Your IP is <span id="ipHere"></span></div>
+                <div id="country">Your country is <span id="countryHere"></span>, <span id="countryCode"></span> <span id="countryFlag"></span></div>
+                <div id="isp">The ISP is <span id="provider"></span>
+                    <br>
+                    <button id="tabMap">Map</button>
+                    <button id="tabData">Raw data</button>
+                </div>
+                <div id='map' style='width: 400px; height: 300px;'></div>
+                <pre id="rawData">
+                    <code class="language-html"></code>
+                </pre>
+            </div>
+        </div>
+    </main>
+
+    <script src="ip.js"></script>
+</body>
+</html>

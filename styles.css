@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #F0F3F6;
+}
+
+#holder {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #2B354F;
+    height: 31em;
+    width: 30em;
+    padding-top: 0.7em;
+    border-radius: 5px;
+}
+
+#title {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+#ip {
+    padding-bottom: 0.5em;
+}
+
+#ipHere {
+    text-decoration: underline;
+    color: #8D93A0;
+}
+
+#country {
+    padding-bottom: 0.5em;
+}
+
+#isp {
+    margin-bottom: 1em;
+    border-bottom: 1px solid #8D93A0;
+}
+
+button {
+    background-color: #ffffff1a;
+    border-radius: 6px 6px 0 0;
+    border: 1px solid #ffffff1a;
+    padding: 4px 8px;
+    padding-top: 0.5em;
+    margin-top: 0.5em;
+    margin-right: 0.4em;
+}
+
+button:hover {
+    cursor: pointer;
+    transition: all .25s;
+}
+
+#tabMap:active {
+    background-color: #F0F3F6;
+    color: #2B354F;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+#tabData:active {
+    background-color: #F0F3F6;
+    color: #2B354F;
+    cursor: pointer;
+    transition: all .25s;
+}
+
+#map {
+    border-radius: 5px;
+}
+
+#rawData {
+    height: 400px;
+    width: 300px;
+    display: none;
+    overflow: auto;
+}
+
+.language-html {
+    display: block;
+    overflow: auto;
+}
+
