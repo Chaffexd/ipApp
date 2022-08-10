@@ -14,4 +14,5 @@
 [Here!](https://ip-checker.shanechaffe.repl.co/)
 
 > I do my best to use best practices to ensure everything I build is fast and responsive, after my first build we had promising scores.
+> 
 > <img width="563" alt="lighthouse" src="https://user-images.githubusercontent.com/67240269/183891831-91d994a5-18b5-4778-89df-e1bf8a2bbce7.png">
