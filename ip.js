@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
         const tabTwo = document.getElementById('tabData');
         const location = document.getElementById('map');
         const dataContainer = document.getElementById('rawData');
-        const raw = document.querySelector('.language-html');
+        const raw = document.querySelector('.language-json');
 
         tabOne.style.backgroundColor = '#F0F3F6';
         tabOne.style.color = '#2B354F';
@@ -66,7 +66,8 @@ window.addEventListener('load', () => {
             tabOne.style.color = '#fff';
             dataContainer.style.width = '400px';
             dataContainer.style.height = '300px';
-            raw.innerHTML = JSON.stringify(data, undefined, 2);
+            raw.innerHTML = JSON.stringify(data, null, " ");
+            hljs.highlightAll();
         });
 
         tabOne.addEventListener('click', () => {
@@ -77,6 +78,8 @@ window.addEventListener('load', () => {
             tabTwo.style.backgroundColor = '#ffffff1a';
             tabTwo.style.color = '#fff';
         });
+
+        
     });
 });
 
