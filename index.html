@@ -36,12 +36,14 @@
         <div id="holder">
             <div id="container">
                 <div id="title">What is my IP? 🌎</div>
-                <div id="ip">Your IP is <span id="ipHere"></span></div>
+                <div id="ip">Your IP is <span id="ipHere"> </span></div>
                 <div id="country">Your country is <span id="countryHere"></span>, <span id="countryCode"></span> <span id="countryFlag"></span></div>
-                <div id="isp">The ISP is <span id="provider"></span>
-                    <br>
-                    <button id="tabMap">Map</button>
+                <div id="isp"><span id="asnPresent">The ISP is</span><span id="provider"></span>
+                    
+                <div id="tabs">
+                    <button id="tabMap" class="active">Map</button>
                     <button id="tabData">Raw data</button>
+                </div>
                 </div>
                 <div id='map' style='width: 400px; height: 300px;'></div>
                 <pre id="rawData">

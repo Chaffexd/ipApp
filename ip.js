@@ -6,6 +6,7 @@ window.addEventListener('load', () => {
     const countryCode = document.getElementById('countryCode');
     const countryFlag = document.getElementById('countryFlag');
     const provider = document.getElementById('provider');
+    const asnPresent = document.getElementById('asnPresent');
 
 
     const api = 'https://api.ipdata.co/?api-key=a518de11479a7774cc93a2ff374998f2dc01b4c7dfdc7f40a3abfd2c';
@@ -21,20 +22,24 @@ window.addEventListener('load', () => {
     .then(data => {
         console.log(data)
         // Choosing data from the API
-        const {ip} = data;
-        const {country_name} = data;
-        const {country_code} = data;
-        const {emoji_flag} = data;
-        const {name} = data.asn;
-        const {latitude, longitude} = data;
+        const {ip, country_name, country_code, emoji_flag, time_zone, latitude, longitude} = data;
+        const name = data.asn ? data.asn.name : undefined; 
+        if (name) {
+            provider.textContent = ` ${name}`;
+        } else {
+            asnPresent.innerHTML = 'Your time zone is ';
+            provider.textContent = data.time_zone.abbr;
+        }
 
         console.log(longitude, latitude);
+        console.log(time_zone.name);
+
         // Setting data from API to a DOM element
-        ipHere.textContent = ip;
+        ipHere.textContent = `${ip}`;
         countryHere.textContent = country_name;
         countryCode.textContent = country_code;
         countryFlag.textContent = emoji_flag;
-        provider.textContent = name;
+        // provider.textContent = name;
 
         // For the map
         mapboxgl.accessToken = 'pk.eyJ1IjoiY2hhZmZleGQiLCJhIjoiY2tvb3JtZXkzMGVoOTJ6cGNzcnpiY3FhbyJ9.uw49z7s69q2Igcpi5sWcIQ';
@@ -53,19 +58,12 @@ window.addEventListener('load', () => {
         const location = document.getElementById('map');
         const dataContainer = document.getElementById('rawData');
         const raw = document.querySelector('.language-json');
-
-        tabOne.style.backgroundColor = '#F0F3F6';
-        tabOne.style.color = '#2B354F';
     
         tabTwo.addEventListener('click', () => {
             location.style.display = 'none';
             dataContainer.style.display = 'block';
-            tabTwo.style.backgroundColor = '#F0F3F6';
-            tabTwo.style.color = '#2B354F';
-            tabOne.style.backgroundColor = '#ffffff1a';
-            tabOne.style.color = '#fff';
-            dataContainer.style.width = '400px';
-            dataContainer.style.height = '300px';
+            tabOne.removeAttribute('class');
+            tabTwo.classList.add('active');
             raw.innerHTML = JSON.stringify(data, null, " ");
             hljs.highlightAll();
         });
@@ -73,13 +71,9 @@ window.addEventListener('load', () => {
         tabOne.addEventListener('click', () => {
             dataContainer.style.display = 'none';
             location.style.display = 'block';
-            tabOne.style.backgroundColor = '#F0F3F6';
-            tabOne.style.color = '#2B354F';
-            tabTwo.style.backgroundColor = '#ffffff1a';
-            tabTwo.style.color = '#fff';
+            tabTwo.removeAttribute('class');
+            tabOne.classList.add('active');
         });
-
-        
     });
 });
 

@@ -44,8 +44,12 @@ main {
 }
 
 #isp {
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     border-bottom: 1px solid #8D93A0;
+}
+
+#tabs {
+    padding-top: 0.5em;
 }
 
 #tabMap, #tabData {
@@ -78,7 +82,7 @@ button:hover {
 }
 
 #map {
-    border-radius: 5px;
+    border-radius: 0 0 5px 5px;
 }
 
 #rawData {
@@ -95,3 +99,19 @@ button:hover {
     margin-top: -2.2em;
 }
 
+/* Transition styles */
+/* tabTwo = tabData */
+#tabData, #tabMap {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(255, 255, 255);
+}
+
+.active {
+    background-color: rgba(255, 255, 255) !important;
+    color: #2B354F !important;
+}
+
+#rawData {
+    width: 400px;
+    height: 300px;
+}
