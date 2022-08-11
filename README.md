@@ -15,4 +15,7 @@
 
 > I do my best to use best practices to ensure everything I build is fast and responsive, after my first build we had promising scores.
 > 
+## After improvements
+> <img width="641" alt="updatedSeo" src="https://user-images.githubusercontent.com/67240269/184124333-7f911bd9-3dee-4277-a1c7-64a97b7faf0a.png">
+## First Lighthouse tests
 > <img width="563" alt="lighthouse" src="https://user-images.githubusercontent.com/67240269/183891831-91d994a5-18b5-4778-89df-e1bf8a2bbce7.png">
