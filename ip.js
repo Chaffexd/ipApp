@@ -74,8 +74,35 @@ window.addEventListener('load', () => {
             tabTwo.removeAttribute('class');
             tabOne.classList.add('active');
         });
+
+        
+        const iconToCopy = document.getElementById("copy");
+        const textToCopy = document.getElementById("ipHere");
+        const successMessage = document.getElementById("copySuccess");
+
+        iconToCopy.addEventListener("click", () => {
+            navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                successMessage.classList.add("activeCopy");
+                successMessage.style.display = 'inline-block';
+                successMessage.style.transition = "all 1s";
+
+                console.log(textToCopy.innerHTML);
+            })
+            .then(() => {
+                setTimeout(function () {
+                    successMessage.classList.remove("activeCopy");
+                    successMessage.style.animation = "fade-out 1s";
+                    successMessage.style.display = 'none';
+                }, 1000)
+            })
+            .catch((err) => {
+                console.log(err)
+            });
+        });
     });
 });
+
 
 
 

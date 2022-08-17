@@ -25,8 +25,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
     <!-- and it's easy to individually load additional languages -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/languages/go.min.js"></script>
+    <script src="https://kit.fontawesome.com/d203ffb3b7.js" crossorigin="anonymous"></script>
     
-
     <title>My IP</title>
 
 </head>
@@ -36,7 +36,8 @@
         <div id="holder">
             <div id="container">
                 <div id="title">What is my IP? 🌎</div>
-                <div id="ip">Your IP is <span id="ipHere"> </span></div>
+                <div id="ip">Your IP is <span id="ipHere"> </span> <i id="copy" class="fa-solid fa-link"></i>
+                <span id="copySuccess">Copied!</span></div>
                 <div id="country">Your country is <span id="countryHere"></span>, <span id="countryCode"></span> <span id="countryFlag"></span></div>
                 <div id="isp"><span id="asnPresent">The ISP is</span><span id="provider"></span>
                     
