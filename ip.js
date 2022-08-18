@@ -84,7 +84,7 @@ window.addEventListener('load', () => {
             navigator.clipboard.writeText(textToCopy)
             .then(() => {
                 successMessage.classList.add("activeCopy");
-                successMessage.style.display = 'inline-block';
+                successMessage.style.display = "inline";
                 successMessage.style.transition = "all 1s";
 
                 console.log(textToCopy.innerHTML);
